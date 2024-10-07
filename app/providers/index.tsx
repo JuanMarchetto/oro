@@ -6,10 +6,6 @@ import { PhantomWalletAdapter, SolflareWalletAdapter } from "@solana/wallet-adap
 import { clusterApiUrl } from "@solana/web3.js";
 import { Suspense, useEffect, useMemo, useState } from "react";
 
-import '@solana/wallet-adapter-react-ui/styles.css';
-import Header from '../components/Header';
-
-
 export function Providers({ children }: { children: React.ReactNode }) {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isClient, setIsClient] = useState(false);
@@ -27,7 +23,6 @@ export function Providers({ children }: { children: React.ReactNode }) {
       <ConnectionProvider endpoint={process.env.NEXT_PUBLIC_SOLANA_RPC_URL ?? clusterApiUrl("devnet")}>
         <WalletProvider wallets={wallets} autoConnect>
           <WalletModalProvider>
-            <Header />
             {children}
           </WalletModalProvider>
         </WalletProvider>
