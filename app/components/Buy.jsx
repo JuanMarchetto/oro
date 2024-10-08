@@ -1,6 +1,5 @@
 import React from "react";
-//import { Vertical } from "./Vertical";
-
+import toast, { Toaster } from 'react-hot-toast';
 
 export const Buy = () => {
   return (
@@ -81,8 +80,13 @@ export const Buy = () => {
                 </div>
               </div>
             </div>
-            <div className="absolute w-[420px] h-[194px] top-[50px] left-0">
-              <div className="flex flex-col w-[418px] h-11 items-center justify-center gap-2.5 px-8 py-2.5 absolute top-[150px] left-px rounded-lg [background:linear-gradient(180deg,rgb(236,210,138)_0%,rgb(207,175,108)_100%)]">
+            <div
+              className="absolute w-[420px] h-[194px] top-[50px] left-0 "
+            >
+              <div className="flex flex-col w-[418px] h-11 items-center justify-center gap-2.5 px-8 py-2.5 absolute top-[150px] left-px rounded-lg [background:linear-gradient(180deg,rgb(236,210,138)_0%,rgb(207,175,108)_100%)] cursor-pointer"
+                            onClick={()=>toast.success("You successfully bought gold")}
+
+              >
                 <div className="inline-flex items-center justify-center gap-3 relative flex-[0_0_auto]">
                   <p className="relative w-fit mt-[-1.00px] [font-family:'Jost-SemiBold',Helvetica] font-semibold text-black text-base tracking-[0] leading-[14px] whitespace-nowrap">
                     Buy Gold with 123.66 USDC
@@ -94,9 +98,8 @@ export const Buy = () => {
                   <div className="absolute h-[35px] top-[7px] left-[17px] [font-family:'Jost-SemiBold',Helvetica] font-semibold text-white text-lg tracking-[0] leading-[34.6px] whitespace-nowrap">
                     $
                   </div>
-                  <div className="h-6 top-3 left-[34px] opacity-50 [font-family:'Jost-Medium',Helvetica] font-medium text-base leading-6 absolute text-white tracking-[0] whitespace-nowrap">
-                    0.00
-                  </div>
+                  <input className="h-6 top-3 left-[34px] opacity-50 [font-family:'Jost-Medium',Helvetica] font-medium text-base leading-6 absolute text-black tracking-[0] whitespace-nowrap px-2" />
+                   
                   <div className="absolute h-6 top-3 left-[252px] opacity-50 [font-family:'Jost-Regular',Helvetica] font-normal text-white text-base tracking-[0] leading-6 whitespace-nowrap">
                     =0.00g
                   </div>
@@ -137,6 +140,7 @@ export const Buy = () => {
         </div>
         <img className="absolute w-px h-[306px] top-0 left-[464px]" alt="Vector" src={"/vector-50.svg"} />
       </div>
+      <Toaster />
     </div>
   );
 };
