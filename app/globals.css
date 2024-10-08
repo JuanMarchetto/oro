@@ -31,7 +31,7 @@ body {
 .wallet-adapter-button {
     background-color: transparent;
     border: none;
-    color: #ddd;
+    color: #fff;
     cursor: pointer;
     display: flex;
     align-items: center;

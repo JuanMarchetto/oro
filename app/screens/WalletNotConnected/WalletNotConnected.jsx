@@ -32,7 +32,7 @@ export const WalletNotConnected = () => {
             </div>
             <div className="absolute w-[170px] h-11 top-[216px] left-24">
               <div className="relative w-[168px] h-11 bg-[url(/rectangle-6-1.svg)] bg-[100%_100%]">
-                <div className="absolute top-[11px] left-[29px] [font-family:'Jost',Helvetica] font-semibold text-[#060606] text-base tracking-[0] leading-[normal]">
+                <div className="absolute top-[11px] left-[29px] [font-family:'Jost',Helvetica] font-semibold text-white text-base tracking-[0] leading-[normal]">
                   Connect Wallet
                 </div>
               </div>
