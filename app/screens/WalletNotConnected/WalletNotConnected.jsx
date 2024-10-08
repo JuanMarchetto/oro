@@ -1,9 +1,16 @@
 "use client";
-
+import { useWallet } from "@solana/wallet-adapter-react";
+import { WellcomeBonusModal } from "../../components/WellcomeBonusModal";
+import { Buy } from "../../components/Buy";
+import { useState } from "react";
 export const WalletNotConnected = () => {
+  const { publicKey } = useWallet();
+  const [isBuyModalOpen, setIsBuyModalOpen] = useState(false);
   return (  
    <div>
+
         <div className="absolute w-[1376px] h-[460px] top-[154px] left-8 bg-[url(/rectangle-11.svg)] bg-[100%_100%]">
+        {!publicKey ? ( <>
           <div className="absolute w-[360px] h-[260px] top-[141px] left-[508px]">
             <div className="absolute w-[86px] h-[86px] top-0 left-[137px]">
               <div className="relative h-[86px] rounded-[45.6px]">
@@ -60,6 +67,10 @@ export const WalletNotConnected = () => {
               </div>
             </div>
           </div>
+          </>) : ( <>
+            {!isBuyModalOpen &&<WellcomeBonusModal setIsBuyModalOpen={setIsBuyModalOpen} />}
+            {isBuyModalOpen && <Buy/>}
+        </>)}
         </div>
         <div className="absolute w-[493px] h-[72px] top-[638px] left-[474px]">
           <div className="absolute w-[241px] h-[72px] top-0 left-0">

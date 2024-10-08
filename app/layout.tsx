@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Providers } from "./providers";
-import { Button } from "./components/Button";
-import { PlusPlusDefault } from "./components/PlusPlusDefault";
 import Header from "./components/Header";
 
 
@@ -18,8 +16,9 @@ export default function RootLayout({
 }>) {
   
   return (
-    <html><Providers>
+    <html>
       <body className="flex flex-col bg-rainbow bg-fixed bg-cover max-h-screen h-screen">
+      <Providers>
       <div className="bg-[#0a0e1e] flex flex-row justify-center w-full h-screen">
         <Header />
         <div className="absolute w-[65px] h-[318px] top-[1726px] left-[1407px] bg-[#0a0e1e]" />
@@ -30,8 +29,8 @@ export default function RootLayout({
 
         {children}
         </div>
-
-      </body></Providers>
+        </Providers>
+      </body>
     </html>
   );
 }

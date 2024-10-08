@@ -1,13 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
-import { useWallet } from "@solana/wallet-adapter-react";
-import Link from "next/link";
 
 const Header = () => {
-  const { publicKey } = useWallet();
-
 
   return (
     // Connect wallet
