@@ -21,15 +21,7 @@ export const Buy = () => {
                       Live Price
                     </div>
                     <div className="w-[63px] h-[63px]">
-      <div className="fixed w-[65px] h-[63px] top-0 left-0">
-        <div className="relative w-[63px] h-[63px]">
-          <div className="absolute top-[27px] left-[15px] opacity-90 [font-family:'Jost-Regular',Helvetica] font-normal text-white text-[12.6px] tracking-[0] leading-[12.6px] whitespace-nowrap">
-            03:09
-          </div>
-          <img className="w-[63px] left-0 absolute h-[63px] top-0" alt="Subtract" src={"/subtract.svg"} />
-          <img className="w-8 left-[31px] absolute h-[63px] top-0" alt="Subtract" src={"/image.svg"} />
-        </div>
-      </div>
+
     </div>
                   </div>
                   <div className="relative w-fit [font-family:'Inter-SemiBold',Helvetica] font-semibold text-xl leading-7 text-white tracking-[0] whitespace-nowrap">
