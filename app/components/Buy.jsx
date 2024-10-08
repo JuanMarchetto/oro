@@ -98,7 +98,7 @@ export const Buy = () => {
                   <div className="absolute h-[35px] top-[7px] left-[17px] [font-family:'Jost-SemiBold',Helvetica] font-semibold text-white text-lg tracking-[0] leading-[34.6px] whitespace-nowrap">
                     $
                   </div>
-                  <input className="h-6 top-3 left-[34px] [font-family:'Jost-Medium',Helvetica] font-medium text-base leading-6 absolute text-black tracking-[0] whitespace-nowrap px-2 bg-[#181c2b] rounded-lg" />
+                  <input className="h-6 top-3 left-[34px] [font-family:'Jost-Medium',Helvetica] font-medium text-base leading-6 absolute text-white tracking-[0] whitespace-nowrap px-2 bg-[#181c2b] rounded-lg" />
                    
                   <div className="absolute h-6 top-3 left-[252px] opacity-50 [font-family:'Jost-Regular',Helvetica] font-normal text-white text-base tracking-[0] leading-6 whitespace-nowrap">
                     =0.00g
